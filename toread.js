@@ -171,3 +171,14 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
+
+document.querySelectorAll('.nav-item input[type="radio"]').forEach((radio) => {
+  radio.addEventListener('change', function () {
+    if (this.checked) {
+      const link = this.closest('a');
+      if (link) {
+        window.location.href = link.getAttribute('href');
+      }
+    }
+  });
+});

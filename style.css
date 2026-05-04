@@ -137,13 +137,18 @@ html {
 }
 
 /* liens */
-.nav-item a {
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 20px;
+  cursor: pointer;
   text-decoration: none;
   color: white;
 }
 
-.nav-item:hover a,
-.nav-item.active a {
+.nav-item:hover,
+.nav-item.active {
   text-shadow: 0px 0px 5px yellow;
 }
 
